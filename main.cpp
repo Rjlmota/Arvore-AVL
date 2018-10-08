@@ -22,7 +22,16 @@ void print_arv(no* p, int espaco);
 
 int main() {
   no *p0=NULL;
-
+  int input = 0;
+  while(true){
+     cout << "Insert a number (-1 to leave) >>";
+     cin >> input;
+     if(input == -1){
+     	break;
+     }
+     inserirNo(&p0, input);
+     print_arv(p0, 4);
+  }
 }
 
 void inserirNo(no **p0, int chave){
